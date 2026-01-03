@@ -11,7 +11,7 @@ public abstract class Conteudo {
     protected String descricao;
     public static final double XP_PADRAO = 10;
 
-    abstract Double calcularXp();
+    public abstract Double calcularXp();
 
     public String getTitulo() {
         return titulo;
