@@ -1,3 +1,4 @@
+import org.example.Dev;
 import org.example.bootcamp.BootCamp;
 import org.example.bootcamp.Curso;
 import org.example.bootcamp.Mentoria;
@@ -43,6 +44,25 @@ public class BootCampTest {
 
         //Assert
         Assert.assertEquals(2, bootCamp.getConteudos().size());
+    }
 
+    @Test
+    public void deveAdicionarAlunoAListaAposInscricao() {
+        //Arrange
+        Curso curso = new Curso("curso java", "curso java", 20);
+        Mentoria mentoria = new Mentoria("mentoria java", "mentoria java");
+        BootCamp bootCamp = new BootCamp();
+        bootCamp.setDescricao("bootcamp java");
+        bootCamp.setDescricao("boot camp java");
+        bootCamp.adicionarConteudo(curso);
+        bootCamp.adicionarConteudo(mentoria);
+        Dev aluno = new Dev();
+        aluno.setNome("joao");
+        //Act
+        aluno.inscrever(bootCamp);
+        System.out.println(bootCamp.getAlunos());
+
+        //Assert
+        Assert.assertEquals(1, bootCamp.getAlunos().size());
     }
 }

@@ -1,6 +1,9 @@
 package org.example.bootcamp;
 
+import org.example.Dev;
+
 import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -10,6 +13,12 @@ public class BootCamp {
     private String nome;
     private String descricao;
     private final Set<Conteudo> conteudos = new LinkedHashSet<>();
+    private final Set<Dev> alunos = new HashSet<>();
+
+
+    public Set<Dev> getAlunos() {
+        return alunos;
+    }
 
 
     public Set<Conteudo> getConteudos() {
@@ -18,6 +27,10 @@ public class BootCamp {
 
     public void adicionarConteudo(Conteudo conteudo) {
         this.conteudos.add(conteudo);
+    }
+
+    public void adicionarAluno(Dev aluno) {
+        this.alunos.add(aluno);
     }
 
     public String getDescricao() {
