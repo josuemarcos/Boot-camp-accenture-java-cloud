@@ -12,7 +12,7 @@ public class BootCamp {
     private final Set<Conteudo> conteudos = new LinkedHashSet<>();
 
 
-    public Set<Conteudo> getConteudos(Conteudo conteudo) {
+    public Set<Conteudo> getConteudos() {
         return conteudos;
     }
 
